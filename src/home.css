@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px 30px;
+    background-color: #C4C4C4;
+}
+
+header h1 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+header li {
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 992px) {
+    header {
+        display: flex;
+        align-items: center;
+        padding: 30px 70px;
+        justify-content: space-between;
+    }
+    
+    header li {
+        display: inline-block;
+    }
+
+    header nav ul li a {
+        margin: 0 13px;
+        text-decoration: none;
+        font-family: Raleway;
+        font-weight: 600;
+    }
+
+    header h1 {
+
+        font-size: 40px;
+    }
+    
+    .slider {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/HD-wallpaper-food-burger\ 2.png');
+        background-size: cover;
+        padding: 130px 100px;
+        border: 1px solid red;
+        height: 663px;
+        
+    }
+
+    .texts {
+        color: white;
+    }
+
+    .texts h1 {
+        font-family: kanit;
+        font-weight: 600;
+        font-size: 60px;
+    }
+
+    .texts p {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 35px;
+        padding: 20px 0;
+    }
+
+    .button {
+        margin-top: 30px;
+    }
+
+    .button a {
+        color: black;
+    }
+
+    .button button {
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        background-color: #FFC700;
+        text-decoration: none;
+        font-family: Raleway;
+        font-weight: 800;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .outlets {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .outlets h1 {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    .outlets p {
+        font-family: Montserrat;
+        color: #A46F48;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+
+    .outlets-images {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .outlets-images h3 {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .outlets-images p {
+        font-size: 15px;
+        margin-left: 12px;
+    }
+
+    #outlets-imgs img {
+        margin: 0 10px;
+    }
+
+    .promotion {
+        text-align: center;
+        background-color: #C4C4C4;
+        padding:70px 0;
+    }
+
+    .promotion h1 {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    .promotion p {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: 20px;
+        color: #A46F48;
+    }
+
+    .promotion-images {
+        padding: 20px 30px;
+        display: inline-block;
+        text-align: left;
+        background-color: #D30000;
+        border-radius: 20px;
+        margin: 0 30px;
+        margin-top: 40px;
+    }
+
+    .promotion-images h3 {
+        font-family: Roboto;
+        padding-top: 15px;
+        font-size: 36px;
+    }
+
+    .promotion-images p {
+        font-family: Raleway;
+        font-weight: 300;
+        font-size: 24px;
+        color: black;
+    }
+
+    .latest-menu {
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .latest-menu h1 {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    .latest-menu p {
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: 20px;
+        color: #A46F48;
+    }
+
+    .latest-menu-images {
+        display: inline-block;
+        margin: 0 10px;
+        margin-top: 40px;
+    }
+    #show-more-btn {
+        margin-top: 60px;
+    }
+
+    #show-more-btn button {
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        background-color: #FFC700;
+        text-decoration: none;
+        font-family: Raleway;
+        font-weight: 800;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #C4C4C4;
+        padding-top: 50px;
+    }
+
+    .follow-contact {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer h3 {
+        font-family: Montserrat;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .soc-med img {
+        margin: 0 3px;
+    }
+
+    .contact-us p {
+        font-family: Montserrat;
+        color: #A93333;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .contact-us p i {
+        font-size: 17px;
+    }
+
+    .contact-us a {
+        color: #A93333;
+        text-decoration: none;
+    }
+
+    #copyright {
+        margin-top: 40px;
+        padding-bottom: 20px;
+        margin-left: 30px;
+        font-family: Montserrat;
+        font-weight: 300;
+    }
+}
