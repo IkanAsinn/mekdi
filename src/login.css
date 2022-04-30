@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #C4C4C4;
+    display: flex;
+    align-items: center;
+    padding: 30px 70px;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 13px;
+}
+
+header li {
+    text-align: center;
+    display: inline-block;
+}
+
+header a:hover, a:active {
+    color: #A46F48;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content img {
+    width: 600px;
+    height: 800px;
+}
+
+.form {
+    background-image: url('/images/wood-background.jpg');
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    padding: 40px 100px;
+    font-family: Montserrat;
+}
+
+.sign-in h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sign-in h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.input-box {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 500px;
+}
+
+.input {
+    height: 40px;
+    width: 500px;
+    border: 3px solid #A46F48;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #e7e7e7;
+    margin-bottom: 30px;
+    text-indent: 15px;
+}
+
+.input-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.input-box a:hover, a:active {
+    color: #A46F48;
+}
+
+.button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button button {
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: #FFC700;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.button button:hover {
+    transform: scale(1.05);
+}
+
+.button p {
+    font-size: 15px;
+}
+
+.button a {
+    color: #A46F48;
+}
+
+footer {
+    background-color: #C4C4C4;
+    padding-top: 50px;
+}
+
+.follow-contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h3 {
+    font-family: Montserrat;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.soc-med img {
+    margin: 0 3px;
+}
+
+.contact-us p {
+    font-family: Montserrat;
+    color: #A93333;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.contact-us p i {
+    font-size: 17px;
+}
+
+.contact-us a {
+    color: #A93333;
+    text-decoration: none;
+}
+
+#copyright {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+    font-family: Montserrat;
+    font-weight: 300;
+}
