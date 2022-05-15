@@ -127,6 +127,7 @@ header li {
     text-align: center;
     background-color: #C4C4C4;
     padding:70px 0;
+    overflow: hidden;
 }
 
 .promotion h1 {
@@ -143,6 +144,19 @@ header li {
     color: #A46F48;
 }
 
+.promotion-imgs {
+    position : relative;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* width: 130%; */
+    display: grid;
+    grid-template-columns: repeat(3, 37.5%);
+    /* grid-gap: 30px; */
+    /* transition: 0s ease-in; */
+}
+
 .promotion-images {
     padding: 20px 30px;
     display: inline-block;
@@ -151,12 +165,15 @@ header li {
     border-radius: 20px;
     margin: 0 30px;
     margin-top: 40px;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .promotion-images h3 {
     font-family: Roboto;
     padding-top: 15px;
     font-size: 36px;
+    pointer-events: none;
 }
 
 .promotion-images p {
@@ -164,6 +181,7 @@ header li {
     font-weight: 300;
     font-size: 24px;
     color: black;
+    pointer-events: none;
 }
 
 .latest-menu {

@@ -84,6 +84,12 @@
                     <p><i class='bx bx-calendar-alt'></i>
                         Valid until 22 June 2022</p>
                 </div>
+                <div class="promotion-images">
+                    <img src="../images/image 15.png" alt="">
+                    <h3>ICE-CREAM BURGER</h3>
+                    <p><i class='bx bx-calendar-alt'></i>
+                        Try it NOW!!</p>
+                </div>
             </div>
         </div>
         <div class="latest-menu">
@@ -126,6 +132,57 @@
         </div>
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
+    <script>
+        let slider = document.querySelector('.promotion');
+        let innerSlider = document.querySelector('.promotion-imgs');
+
+        let pressed = false;
+        let startx;
+        let x;
+
+        slider.addEventListener('mousedown', (e) => {
+            pressed = true;
+            startx = e.offsetX - innerSlider.offsetLeft;
+            slider.style.cursor = 'grabbing';
+        })
+
+        slider.addEventListener('mouseenter', () => {
+            slider.style.cursor = 'grab';
+        })
+
+        slider.addEventListener('mouseleave', () => {
+            slider.style.cursor = 'default';
+        })
+
+        slider.addEventListener('mouseup', () => {
+            slider.style.cursor = 'grab';
+        })
+
+        window.addEventListener('mouseup', () => {
+            pressed = false;
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!pressed) return;
+            e.preventDefault();
+
+            x = e.offsetX;
+
+            innerSlider.style.left = `${x - startx}px`;
+            boundCards();
+        });
+
+        function boundCards() {
+            const container_rect = slider.getBoundingClientRect();
+            const card_rect = innerSlider.getBoundingClientRect();
+
+            if (parseInt(innerSlider.style.left) > 0) {
+                innerSlider.style.left = 0;
+            } else if (card_rect.right < container_rect.right) {
+                innerSlider.style.left = `$-{container_rect.width - card_rect.width}px`;
+            }
+        }
+    </script>
 </body>
 
 </html>
