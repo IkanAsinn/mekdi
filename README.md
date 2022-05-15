@@ -30,11 +30,10 @@ BeverageMenu :
 Guidelines :
 - only external CSS
 - layout no table
-- use either bahasa or englis, not both
+- use either bahasa or english, not both
 - Make your website responsive so it can deliver in any size, particularly for desktops, tablets and mobile devices
 - Organize your files with subdirectories
 - Include references (link from a website, book) that you use in creating the website
-- 
 
 
 
