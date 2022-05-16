@@ -74,21 +74,27 @@
             <div class="promotion-imgs">
                 <div class="promotion-images">
                     <img src="../images/image 11.png" alt="">
-                    <h3>BUY 1 GET 2!!</h3>
-                    <p><i class='bx bx-calendar-alt'></i>
-                        Valid until 22 June 2022</p>
+                    <div class="promotion-content">
+                        <h3>BUY 1 GET 2!!</h3>
+                        <p><i class='bx bx-calendar-alt'></i>
+                            Valid until 22 June 2022</p>
+                    </div>
                 </div>
                 <div class="promotion-images">
                     <img src="../images/image 13.png" alt="">
-                    <h3>FREE UNLIMITED SODA!!</h3>
-                    <p><i class='bx bx-calendar-alt'></i>
-                        Valid until 22 June 2022</p>
+                    <div class="promotion-content">
+                        <h3>FREE UNLIMITED SODA!!</h3>
+                        <p><i class='bx bx-calendar-alt'></i>
+                            Valid until 22 June 2022</p>
+                    </div>
                 </div>
                 <div class="promotion-images">
                     <img src="../images/image 15.png" alt="">
-                    <h3>ICE-CREAM BURGER</h3>
-                    <p><i class='bx bx-calendar-alt'></i>
-                        Try it NOW!!</p>
+                    <div class="promotion-content">
+                        <h3>ICE-CREAM BURGER</h3>
+                        <p><i class='bx bx-calendar-alt'></i>
+                            Try it NOW!!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,6 +141,8 @@
     <script>
         let slider = document.querySelector('.promotion');
         let innerSlider = document.querySelector('.promotion-imgs');
+        let imgs_count = document.querySelectorAll('.promotion-images').length;
+
 
         let pressed = false;
         let startx;
@@ -178,9 +186,12 @@
 
             if (parseInt(innerSlider.style.left) > 0) {
                 innerSlider.style.left = 0;
-            } else if (card_rect.right < container_rect.right) {
-                innerSlider.style.left = `$-{container_rect.width - card_rect.width}px`;
+            } else if (parseInt(innerSlider.style.left) < -(70 * imgs_count)) {
+                innerSlider.style.left = `-${70 * imgs_count}px`;
+            } else if (card_rect.width < container_rect.width) {
+                innerSlider.style.left = `-${container_rect.width - card_rect.width}px`
             }
+            console.log(innerSlider.style.left);
         }
     </script>
 </body>
