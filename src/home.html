@@ -68,11 +68,11 @@
             </div>
         </div>
 
-        <div class="promotion">
+        <div class="promotion slider2">
             <h1>PROMOTIONS</h1>
             <p>STAY UPDATED!</p>
-            <div class="promotion-imgs">
-                <div class="promotion-images">
+            <div class="promotion-imgs slider2-imgs">
+                <div class="promotion-images slider2-images">
                     <img src="../images/image 11.png" alt="">
                     <div class="promotion-content">
                         <h3>BUY 1 GET 2!!</h3>
@@ -80,7 +80,7 @@
                             Valid until 22 June 2022</p>
                     </div>
                 </div>
-                <div class="promotion-images">
+                <div class="promotion-images slider2-images">
                     <img src="../images/image 13.png" alt="">
                     <div class="promotion-content">
                         <h3>FREE UNLIMITED SODA!!</h3>
@@ -88,7 +88,15 @@
                             Valid until 22 June 2022</p>
                     </div>
                 </div>
-                <div class="promotion-images">
+                <div class="promotion-images slider2-images">
+                    <img src="../images/image 15.png" alt="">
+                    <div class="promotion-content">
+                        <h3>ICE-CREAM BURGER</h3>
+                        <p><i class='bx bx-calendar-alt'></i>
+                            Try it NOW!!</p>
+                    </div>
+                </div>
+                <div class="promotion-images slider2-images">
                     <img src="../images/image 15.png" alt="">
                     <div class="promotion-content">
                         <h3>ICE-CREAM BURGER</h3>
@@ -98,7 +106,39 @@
                 </div>
             </div>
         </div>
-        <div class="latest-menu">
+
+        <div class="latest-menu slider2">
+            <h1>LATEST MENU</h1>
+            <p>YUMMY</p>
+            <div class="latest-menu-imgs slider2-imgs">
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/SexyChickenBurger.png" alt="">
+                    <h3>Sexy Chicken Burger</h3>
+                </div>
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/DamnCheeseBurger.png" alt="">
+                    <h3>Damn Cheese Burger</h3>
+                </div>
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/ClassicCheeseBurger.png" alt="">
+                    <h3>Classic Cheese Burger</h3>
+                </div>
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/IceCreamBurger.png" alt="">
+                    <h3>Ice Cream Burger</h3>
+                </div>
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/ChickenBurgerCombo1.png" alt="">
+                    <h3>Chicken Burger Combo 1</h3>
+                </div>
+                <div class="latest-menu-images slider2-images">
+                    <img src="../images/FoodMenu/BlackPepper.png" alt="">
+                    <h3>Black Pepper Chicken Burger</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="latest-menu">
             <h1>LATEST MENU</h1>
             <p>YUMMY!</p>
             <div class="latest-menu-imgs">
@@ -115,7 +155,7 @@
             <div id="show-more-btn">
                 <a href="#"><button>SHOW ME MORE!</button></a>
             </div>
-        </div>
+        </div> -->
     </div>
 
 
@@ -139,60 +179,65 @@
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
     <script>
-        let slider = document.querySelector('.promotion');
-        let innerSlider = document.querySelector('.promotion-imgs');
-        let imgs_count = document.querySelectorAll('.promotion-images').length;
+        let slider = document.querySelectorAll('.slider2');
+        let innerSlider = document.querySelectorAll('.slider2-imgs');
+        let imgs_count = document.querySelectorAll('.slider2-images').length/2;
+        console.log(imgs_count)
 
+        for(let i=0; i<2; i++){
+            console.log(imgs_count)
 
-        let pressed = false;
-        let startx;
-        let x;
+            let pressed = false;
+            let startx;
+            let x;
 
-        slider.addEventListener('mousedown', (e) => {
-            pressed = true;
-            startx = e.offsetX - innerSlider.offsetLeft;
-            slider.style.cursor = 'grabbing';
-        })
+            slider[i].addEventListener('mousedown', (e) => {
+                pressed = true;
+                startx = e.offsetX - innerSlider[i].offsetLeft;
+                slider[i].style.cursor = 'grabbing';
+            })
 
-        slider.addEventListener('mouseenter', () => {
-            slider.style.cursor = 'grab';
-        })
+            slider[i].addEventListener('mouseenter', () => {
+                slider[i].style.cursor = 'grab';
+            })
 
-        slider.addEventListener('mouseleave', () => {
-            slider.style.cursor = 'default';
-        })
+            slider[i].addEventListener('mouseleave', () => {
+                slider[i].style.cursor = 'default';
+            })
 
-        slider.addEventListener('mouseup', () => {
-            slider.style.cursor = 'grab';
-        })
+            slider[i].addEventListener('mouseup', () => {
+                slider[i].style.cursor = 'grab';
+            })
 
-        window.addEventListener('mouseup', () => {
-            pressed = false;
-        });
+            window.addEventListener('mouseup', () => {
+                pressed = false;
+            });
 
-        slider.addEventListener('mousemove', (e) => {
-            if (!pressed) return;
-            e.preventDefault();
+            slider[i].addEventListener('mousemove', (e) => {
+                if (!pressed) return;
+                e.preventDefault();
 
-            x = e.offsetX;
+                x = e.offsetX;
 
-            innerSlider.style.left = `${x - startx}px`;
-            boundCards();
-        });
+                innerSlider[i].style.left = `${x - startx}px`;
+                boundCards();
+            });
 
-        function boundCards() {
-            const container_rect = slider.getBoundingClientRect();
-            const card_rect = innerSlider.getBoundingClientRect();
+            function boundCards() {
+                const container_rect = slider[i].getBoundingClientRect();
+                const card_rect = innerSlider[i].getBoundingClientRect();
 
-            if (parseInt(innerSlider.style.left) > 0) {
-                innerSlider.style.left = 0;
-            } else if (parseInt(innerSlider.style.left) < -(70 * imgs_count)) {
-                innerSlider.style.left = `-${70 * imgs_count}px`;
-            } else if (card_rect.width < container_rect.width) {
-                innerSlider.style.left = `-${container_rect.width - card_rect.width}px`
+                if (parseInt(innerSlider[i].style.left) > 0) {
+                    innerSlider[i].style.left = 0;
+                } else if (parseInt(innerSlider[i].style.left) < -(120 * imgs_count)) {
+                    innerSlider[i].style.left = `-${120 * imgs_count}px`;
+                } else if (card_rect.width < container_rect.width) {
+                    innerSlider[i].style.left = `-${container_rect.width - card_rect.width}px`
+                }
+                console.log(innerSlider[i].style.left);
             }
-            console.log(innerSlider.style.left);
         }
+      
     </script>
 </body>
 

@@ -156,8 +156,8 @@ header a:hover, a:active {
     top: 0;
     left: 0;
     height: 100%;
-    /* width: 130%; */
-    display: grid;
+    width: 150%;
+    display: flex;
     grid-template-columns: repeat(3, 37.5%);
     /* grid-gap: 30px; */
     /* transition: 0s ease-in; */
@@ -198,7 +198,12 @@ header a:hover, a:active {
     pointer-events: none;
 }
 
+
 .latest-menu {
+    text-align: center;
+    padding:70px 0;
+    overflow: hidden;
+    width: 100vw;
     text-align: center;
     padding: 70px 0;
 }
@@ -217,11 +222,39 @@ header a:hover, a:active {
     color: #A46F48;
 }
 
-.latest-menu-images {
-    display: inline-block;
-    margin: 0 10px;
-    margin-top: 40px;
+
+.latest-menu-imgs{
+    display: flex;
+    position : relative;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150%;
+    grid-template-columns: repeat(3, 37.5%);
 }
+
+.latest-menu-images {
+    /* display: inline-block; */
+    /* width: 0%; */
+    background-color: #C4C4C4;
+    margin: 0 20px;
+    margin-top: 40px;
+    font-family: Roboto;
+    /* border: 3px solid black; */
+    border-radius: 3%;
+    padding: 1%;
+    /* overflow: hidden ; */
+}
+
+.latest-menu-images h3{
+    font-family: Roboto;
+    padding-top: 15px;
+    font-size: 30px;
+    /* font-weight: 400; */
+    pointer-events: none;
+}
+
 #show-more-btn {
     margin-top: 60px;
 }
