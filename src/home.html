@@ -17,7 +17,10 @@
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;1,700&family=Montserrat:wght@400;500;600&family=Raleway:wght@200;400;500;600;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+        integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -71,7 +74,7 @@
         <div class="promotion slider2">
             <h1>PROMOTIONS</h1>
             <p>STAY UPDATED!</p>
-            <div class="promotion-imgs slider2-imgs">
+            <div class="promotion-imgs slider2-imgs" id="promotion-imgs">
                 <div class="promotion-images slider2-images">
                     <img src="../images/image 11.png" alt="">
                     <div class="promotion-content">
@@ -158,7 +161,6 @@
         </div> -->
     </div>
 
-
     <footer>
         <div class="follow-contact">
             <div class="follow-us">
@@ -178,67 +180,7 @@
         </div>
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
-    <script>
-        let slider = document.querySelectorAll('.slider2');
-        let innerSlider = document.querySelectorAll('.slider2-imgs');
-        let imgs_count = document.querySelectorAll('.slider2-images').length/2;
-        console.log(imgs_count)
-
-        for(let i=0; i<2; i++){
-            console.log(imgs_count)
-
-            let pressed = false;
-            let startx;
-            let x;
-
-            slider[i].addEventListener('mousedown', (e) => {
-                pressed = true;
-                startx = e.offsetX - innerSlider[i].offsetLeft;
-                slider[i].style.cursor = 'grabbing';
-            })
-
-            slider[i].addEventListener('mouseenter', () => {
-                slider[i].style.cursor = 'grab';
-            })
-
-            slider[i].addEventListener('mouseleave', () => {
-                slider[i].style.cursor = 'default';
-            })
-
-            slider[i].addEventListener('mouseup', () => {
-                slider[i].style.cursor = 'grab';
-            })
-
-            window.addEventListener('mouseup', () => {
-                pressed = false;
-            });
-
-            slider[i].addEventListener('mousemove', (e) => {
-                if (!pressed) return;
-                e.preventDefault();
-
-                x = e.offsetX;
-
-                innerSlider[i].style.left = `${x - startx}px`;
-                boundCards();
-            });
-
-            function boundCards() {
-                const container_rect = slider[i].getBoundingClientRect();
-                const card_rect = innerSlider[i].getBoundingClientRect();
-
-                if (parseInt(innerSlider[i].style.left) > 0) {
-                    innerSlider[i].style.left = 0;
-                } else if (parseInt(innerSlider[i].style.left) < -(120 * imgs_count)) {
-                    innerSlider[i].style.left = `-${120 * imgs_count}px`;
-                } else if (card_rect.width < container_rect.width) {
-                    innerSlider[i].style.left = `-${container_rect.width - card_rect.width}px`
-                }
-                console.log(innerSlider[i].style.left);
-            }
-        }
-      
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

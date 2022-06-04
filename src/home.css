@@ -152,7 +152,7 @@ header a:hover, a:active {
 
 .promotion-imgs {
     position : relative;
-    pointer-events: none;
+    /* pointer-events: none; */
     top: 0;
     left: 0;
     height: 100%;
@@ -226,7 +226,7 @@ header a:hover, a:active {
 .latest-menu-imgs{
     display: flex;
     position : relative;
-    pointer-events: none;
+    /* pointer-events: none; */
     top: 0;
     left: 0;
     height: 100%;
