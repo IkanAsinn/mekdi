@@ -50,7 +50,7 @@ header a:hover, a:active {
 
 .banner button {
     position: absolute;
-    left: 78%;
+    left: 80%;
     bottom: 28%;
     /* width: 100%; */
 }
@@ -60,9 +60,11 @@ header a:hover, a:active {
     font-family: Raleway;
     font-weight: bold;
     font-size: 1vw;
-    height: 13%;
-    width: 20%;
+    height: 10%;
+    width: 15%;
+    border: none;
     border-radius: 10px;
+    transition: 200ms ease-in-out
 }
 
 .banner button:hover {

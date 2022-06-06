@@ -41,7 +41,7 @@ header a:hover, a:active {
 }
 
 .slider {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/HD-wallpaper-food-burger\ 2.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/');
     background-size: cover;
     padding: 130px 100px;
     height: 663px;
@@ -125,6 +125,8 @@ header a:hover, a:active {
 
 #outlets-imgs img {
     margin: 0 10px;
+    height: 260px;
+    width: 440px;
 }
 
 .promotion {
@@ -161,6 +163,12 @@ header a:hover, a:active {
     grid-template-columns: repeat(3, 37.5%);
     /* grid-gap: 30px; */
     /* transition: 0s ease-in; */
+}
+
+.promotion-imgs img {
+    width: 456px;
+    height: 310px;
+    border-radius: 20px;
 }
 
 .promotion-images {
@@ -232,6 +240,12 @@ header a:hover, a:active {
     height: 100%;
     width: 150%;
     grid-template-columns: repeat(3, 37.5%);
+}
+
+.latest-menu-imgs img {
+    width: 347px;
+    height: 347px;
+    border-radius: 20px;
 }
 
 .latest-menu-images {

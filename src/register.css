@@ -52,7 +52,7 @@ header a:hover, a:active {
 }
 
 .form {
-    background-image: url('../images/wood-background.jpg');
+    background-image: url('../image/form/wood-background.jpg');
     height: auto;
     width: 100%;
     display: flex;

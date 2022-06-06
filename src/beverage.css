@@ -45,10 +45,11 @@ header a:hover, a:active {
 }
 
 .banner {
-    background-image: url(../images/beverage.jpg);
-    background-size: 100%;
-    height: 714px;
     position: relative;
+}
+
+.banner img {
+    width: 100%;
 }
 
 .button {
@@ -65,6 +66,8 @@ header a:hover, a:active {
     width: 200px;
     font-size: 20px;
     border-radius: 10px;
+    border: none;
+    transition: 200ms ease-in-out;
 }
 
 .button button:hover {
@@ -128,6 +131,8 @@ section h1 {
 }
 
 .flexbox {
+    /* border: 1px solid red; */
+    height: fit-content;
     width: 32%;
     background-color: #c4c4c4;
     padding: 25px;
@@ -153,24 +158,15 @@ section h1 {
     /* border: 1px solid red; */
 }
 
-.details p {
-    font-size: 12px;
-    height: 60px;
-    padding: 15px 0;
-    /* border: 1px solid red; */
-}
-
 .flex-1 {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid blue; */
 }
 
 .flex-1 h4 {
     font-size: 14px;
-    /* border: 1px solid red; */
 }
 
 .flex-1 button {
