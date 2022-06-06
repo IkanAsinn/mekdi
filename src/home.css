@@ -40,12 +40,20 @@ header a:hover, a:active {
     color: #A46F48;
 }
 
-.slider {
+/* .slider {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/');
     background-size: cover;
     padding: 130px 100px;
     height: 663px;
-    
+} */
+
+.slider {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.slider img {
+    width: 100%;
 }
 
 .texts {
@@ -66,7 +74,10 @@ header a:hover, a:active {
 }
 
 .button {
-    margin-top: 30px;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    /* margin-top: 30px; */
 }
 
 .button a {
@@ -84,6 +95,11 @@ header a:hover, a:active {
     font-size: 20px;
     border: none;
     cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.button button:hover {
+    transform: scale(1.05);
 }
 
 .outlets {

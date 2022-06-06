@@ -67,6 +67,9 @@ section h1 {
 
 .flexbox {
     width: 32%;
+    position: relative;
+    height: 360px;
+    /* border: 1px solid red; */
     background-color: #c4c4c4;
     padding: 25px;
     border-radius: 20px;
@@ -93,13 +96,13 @@ section h1 {
     margin: 3px 0px;
 }
 
-.details p {
+/* .details p {
     font-size: 20px;
     font-weight: 200;
     height: 60px;
     font-family: 'Roboto', sans-serif;
     margin: 0%;
-}
+} */
 
 .flex-1 {
     margin-top: 15px;
@@ -153,8 +156,72 @@ header h1 {
     font-size: 40px;
 }
 
+.img-header {
+    position: relative;
+}
+
 .img-header img{
     width: 100%;
+}
+
+.img-header .button {
+    position: absolute;
+    left: 11%;
+    top: 75%;
+}
+
+.img-header .button button {
+    background-color: #FFC700;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 200ms ease-in-out;
+}
+
+.img-header button:hover {
+    transform: scale(1.05);
+}
+
+.slider-btn {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-btn button {
+    background-color: transparent;
+    border: none;
+    transition: 200ms ease-in-out;
+}
+
+.slider-btn i {
+    color: white;
+    font-size: 150px;
+    opacity: 50%;
+    /* border: 1px solid green; */
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-top: 15px;
+    /* height: fit-content; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.text i {
+    margin-right: 10px;
+    font-size: 25px;
+    color: #D30000;
 }
 
 .navbar {
@@ -167,6 +234,7 @@ header h1 {
     position: sticky;
     top: -1px;
     background-color: white;
+    z-index: 10;
     /* border: 1px solid red; */
 }
 
