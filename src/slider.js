@@ -2,6 +2,23 @@ $(document).ready(() => {
     const leftBtn = $('.slider-btn #prev');
     const rightBtn = $('.slider-btn #next');
 
+    setInterval(() => {
+        const curr = $('.img-banner .slide.active');
+        const currNav = $('.nav-btn .navigate.active');
+        const next = curr.next();
+        const nextNav = currNav.next();
+        curr.removeClass('active');
+        currNav.removeClass('active');
+        if (next.length == 0) {
+            $('.img-banner .slide:first-child').addClass('active');
+            $('.nav-btn .navigate:first-child').addClass('active');
+        } else {
+            next.addClass('active');
+            nextNav.addClass('active');
+        }
+        changeButton();
+    }, 5000);
+
     rightBtn.click(() => {
         const curr = $('.img-banner .slide.active');
         const currNav = $('.nav-btn .navigate.active');
@@ -11,17 +28,16 @@ $(document).ready(() => {
         const prevNav = currNav.prev();
 
         if (next.length) {
-            curr.removeClass('active').css('z-index', '-1');
-            next.addClass('active').css('z-index', '1');
+            curr.removeClass('active');
+            next.addClass('active');
             currNav.removeClass('active');
             nextNav.addClass('active');
         } else {
-            curr.removeClass('active').css('z-index', '-1');
-            prev.addClass('active').css('z-index', '1');
+            curr.removeClass('active');
+            prev.addClass('active');
             currNav.removeClass('active');
             prevNav.addClass('active');
         }
-
         changeButton();
     })
 
@@ -34,17 +50,16 @@ $(document).ready(() => {
         const prevNav = currNav.prev();
 
         if (prev.length) {
-            curr.removeClass('active').css('z-index', '-1');
-            prev.addClass('active').css('z-index', '1');
+            curr.removeClass('active');
+            prev.addClass('active');
             currNav.removeClass('active');
             prevNav.addClass('active');
         } else {
-            curr.removeClass('active').css('z-index', '-1');
-            next.addClass('active').css('z-index', '1');
+            curr.removeClass('active');
+            next.addClass('active');
             currNav.removeClass('active');
             nextNav.addClass('active');
         }
-
         changeButton();
     })
 })

@@ -163,18 +163,15 @@ header h1 {
     width: 100%;
 }
 
-/* .img-banner {
-    height: 550px;
-    position: relative;
-    border: 1px solid red;
-} */
-
 .img-header .img-banner .slide {
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 
 .img-header .img-banner .slide.active {
-    display: inline-block;
+    position: relative;
+    opacity: 1;
+    transition: 500ms ease-in-out;
 }
 
 .img-header .button {
@@ -196,7 +193,7 @@ header h1 {
     padding: 15px 30px;
     font-size: 15px;
     font-weight: bold;
-    /* transition: 200ms ease-in-out; */
+    transition: 200ms ease-in-out;
 }
 
 .img-header .button.change button {
@@ -212,7 +209,6 @@ header h1 {
     top: 50%;
     position: absolute;
     width: 100%;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
@@ -229,7 +225,6 @@ header h1 {
     color: white;
     font-size: 150px;
     opacity: 50%;
-    /* border: 1px solid green; */
 }
 
 .text {
@@ -237,9 +232,7 @@ header h1 {
     bottom: 20px;
     display: flex;
     align-items: center;
-    /* border: 1px solid red; */
     margin-top: 15px;
-    /* height: fit-content; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -259,7 +252,7 @@ header h1 {
 
 .nav-btn .navigate {
     background-color: #C4C4C4;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     border: none;
     transition: 200ms ease-in-out;
