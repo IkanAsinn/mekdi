@@ -2,77 +2,70 @@ $(document).ready(() => {
     const leftBtn = $('.slider-btn #prev');
     const rightBtn = $('.slider-btn #next');
 
-    setInterval(() => {
-        const curr = $('.img-banner .slide.active');
-        const currNav = $('.nav-btn .navigate.active');
-        const next = curr.next();
-        const nextNav = currNav.next();
-        curr.removeClass('active');
-        currNav.removeClass('active');
-        if (next.length == 0) {
-            $('.img-banner .slide:first-child').addClass('active');
-            $('.nav-btn .navigate:first-child').addClass('active');
-        } else {
-            next.addClass('active');
-            nextNav.addClass('active');
-        }
-        changeButton();
-    }, 5000);
-
-    rightBtn.click(() => {
-        const curr = $('.img-banner .slide.active');
-        const currNav = $('.nav-btn .navigate.active');
-        const next = curr.next();
-        const nextNav = currNav.next();
-        const prev = curr.prev();
-        const prevNav = currNav.prev();
-
-        if (next.length) {
-            curr.removeClass('active');
-            next.addClass('active');
-            currNav.removeClass('active');
-            nextNav.addClass('active');
-        } else {
-            curr.removeClass('active');
-            prev.addClass('active');
-            currNav.removeClass('active');
-            prevNav.addClass('active');
-        }
-        changeButton();
-    })
-
-    leftBtn.click(() => {
-        const curr = $('.img-banner .slide.active');
-        const currNav = $('.nav-btn .navigate.active');
-        const next = curr.next();
-        const nextNav = currNav.next();
-        const prev = curr.prev();
-        const prevNav = currNav.prev();
-
-        if (prev.length) {
-            curr.removeClass('active');
-            prev.addClass('active');
-            currNav.removeClass('active');
-            prevNav.addClass('active');
-        } else {
-            curr.removeClass('active');
-            next.addClass('active');
-            currNav.removeClass('active');
-            nextNav.addClass('active');
-        }
-        changeButton();
-    })
+    setInterval(viewSlideShow, 8000);
+    leftBtn.click(viewSlideShow);
+    rightBtn.click(viewSlideShow);
 })
 
-const changeButton = () => {
-    const currentImg = $('.img-banner .slide.active');
-    const button = $('.img-header .button');
-    const btnContent = $('.img-header .button button')
-    if (currentImg.hasClass('change')) {
-        button.addClass('change');
-        btnContent.html('REGISTER NOW!');
+const viewSlideShow = () => {
+    const slides = $('.img-banner .slide.active');
+
+    addActive(slides);
+    animateSlide();
+}
+
+const animateSlide = () => {
+    const content = $('.content');
+    const banner = $('.img-banner');
+    const slide = $('.img-banner .slide.active');
+    const slideWidth = slide.width();
+
+    const prev = slide.prev();
+    if (prev.length !== 0) {
+        banner.animate({'margin-left': '-=' + slideWidth}, 1000);
     } else {
-        button.removeClass('change');
-        btnContent.html('GET YOURS NOW!');
+        banner.animate({'margin-left': 0}, 1000);
+    }
+
+    const button = $('.button');
+    const btn = button.find('button');
+    const link = button.find('a');
+    button.fadeOut(0);
+    if (content.hasClass('promotion')) {
+        if (slide.hasClass('change')) {
+            button.addClass('change');
+            btn.html('REGISTER NOW!');
+            link.attr('href', 'login.html');
+        } else {
+            button.removeClass('change');
+            btn.html('GET YOURS NOW!');
+            link.attr('href', 'FoodMenu.html');
+        }
+    } else if (content.hasClass('home')) {
+        const link = button.find('a');
+        if (slide.hasClass('change')) {
+            link.attr('href', 'beverage.html');
+        } else {
+            link.attr('href', 'FoodMenu.html');
+        }
+    }
+    button.fadeIn(1500);
+}
+
+const addActive = (element) => {
+    const currNav = $('.nav-btn .navigate.active');
+    const nextNav = currNav.next();
+    const prevNav = currNav.prev();
+    const next = element.next();
+    const prev = element.prev();
+
+    element.removeClass('active');
+    currNav.removeClass('active');
+    if (next.length) {
+        next.addClass('active');
+        nextNav.addClass('active');
+    } else {
+        prev.addClass('active');
+        prevNav.addClass('active');
     }
 }

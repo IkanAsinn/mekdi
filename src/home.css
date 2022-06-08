@@ -40,20 +40,77 @@ header a:hover, a:active {
     color: #A46F48;
 }
 
-/* .slider {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home/');
-    background-size: cover;
-    padding: 130px 100px;
-    height: 663px;
-} */
-
-.slider {
+.img-header {
     position: relative;
-    /* border: 1px solid red; */
+    overflow: hidden;
 }
 
-.slider img {
+.img-banner {
+    display: flex;
+    width: 200%;
+}
+
+.img-header .img-banner .slide {
     width: 100%;
+    transition: 1s;
+}
+
+.img-header .slide img {
+    width: 100%;
+}
+
+.img-header button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.slider-btn {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-btn button {
+    background-color: transparent;
+    border: none;
+    transition: 200ms ease-in-out;
+    z-index: 10;
+}
+
+.slider-btn i {
+    color: white;
+    font-size: 150px;
+    opacity: 50%;
+}
+
+.nav-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.nav-btn .navigate {
+    background-color: #C4C4C4;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    transition: 200ms ease-in-out;
+}
+
+.nav-btn .navigate:hover, .navigate.active {
+    width: 25px;
+    border-radius: 5px;
+    background-color: #FFC700;
+    transform: scale(1.2);
+}
+
+.nav-btn .navigate:not(:last-child) {
+    margin-right: 10px;
 }
 
 .texts {

@@ -21,6 +21,8 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
         integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+
+    <script src="slider.js" defer></script>
 </head>
 
 <body>
@@ -37,16 +39,31 @@
         </nav>
     </header>
 
-    <div class="content">
-        <div class="slider">
-            <img src="../image/home/home-banner.jpg" alt="">
-            <!-- <div class="texts">
-                <h1>Serve with LOVE!</h1>
-                <p>Fresh off the grill to<br>satisfy your craving</p>
-                <p>So tasty that your tummy<br>will thank you :)</p>
-            </div> -->
+    <div class="content home">
+        <div class="img-header">
+            <div class="img-banner">
+                <div class="slide active">
+                    <img src="../image/home/home-banner.jpg" alt="">
+                </div>
+                <div class="slide change">
+                    <img src="../image/home/home-banner-2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slider-btn">
+                <button id="prev"><i class='bx bx-chevron-left'></i></button>
+                <button id="next"><i class='bx bx-chevron-right'></i></button>
+            </div>
+
             <div class="button">
-                <a href="#"><button>Tell me more!</button></a>
+                <a href="FoodMenu.html">
+                    <button type="button">Tell Me More!</button>
+                </a>
+            </div>
+
+            <div class="nav-btn">
+                <button class="navigate active"></button>
+                <button class="navigate"></button>
             </div>
         </div>
 

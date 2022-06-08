@@ -16,7 +16,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- nav js -->
-    <script type="text/javascript" src="nav.js"></script>
+    <script src="menu-nav.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,7 +36,9 @@
         <div class="banner">
             <img src="../image/beverage/beverage-banner.jpg" alt="">
             <div class="button">
-                <button type="button">ORDER NOW!</button>
+                <a href="login.html">
+                    <button type="button">ORDER NOW!</button>
+                </a>
             </div>
         </div>
 
@@ -111,7 +113,7 @@
             <h1>Soft Drink</h1>
             <div class="flex-container">
                 <div class="flexbox">
-                    <img src="../image/beverage/" alt="">
+                    <img src="../image/beverage/fanta.jpg" alt="">
                     <div class="details">
                         <h3>Fanta</h3>
                     </div>
@@ -121,7 +123,7 @@
                     </div>
                 </div>
                 <div class="flexbox">
-                    <img src="../images/sprite.jpg" alt="">
+                    <img src="../image/beverage/sprite.jpg" alt="">
                     <div class="details">
                         <h3>Sprite</h3>
                     </div>
@@ -131,7 +133,7 @@
                     </div>
                 </div>
                 <div class="flexbox">
-                    <img src="../images/cola.jpg" alt="">
+                    <img src="../image/beverage/cola.jpg" alt="">
                     <div class="details">
                         <h3>Coca-Cola</h3>
                     </div>
@@ -143,7 +145,7 @@
             </div>
             <div class="flex-container">
                 <div class="flexbox">
-                    <img src="../images/pepsi.jpg" alt="">
+                    <img src="../image/beverage/pepsi.jpg" alt="">
                     <div class="details">
                         <h3>Pepsi</h3>
                     </div>
@@ -334,29 +336,6 @@
         </div>
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
-
-    <!-- script -->
-    <script>
-        const sections = document.querySelectorAll('section');
-        const navList = document.querySelectorAll('.navbar ul li');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
-            })
-            navList.forEach(li => {
-                li.classList.remove('active');
-                if (li.classList.contains(current)) {
-                    li.classList.add('active');
-                }
-            })
-        })
-    </script>
     
 </body>
 </html>

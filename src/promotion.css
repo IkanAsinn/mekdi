@@ -157,21 +157,21 @@ header h1 {
 
 .img-header {
     position: relative;
+    overflow: hidden;
 }
 
-.img-header img {
-    width: 100%;
+.img-banner {
+    display: flex;
+    width: 200%;
 }
 
 .img-header .img-banner .slide {
-    position: absolute;
-    opacity: 0;
+    width: 100%;
+    transition: 1s;
 }
 
-.img-header .img-banner .slide.active {
-    position: relative;
-    opacity: 1;
-    transition: 500ms ease-in-out;
+.img-header .slide img {
+    width: 100%;
 }
 
 .img-header .button {
@@ -259,6 +259,8 @@ header h1 {
 }
 
 .nav-btn .navigate:hover, .navigate.active {
+    width: 25px;
+    border-radius: 5px;
     background-color: #FFC700;
     transform: scale(1.2);
 }
