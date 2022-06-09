@@ -5,7 +5,89 @@ $(document).ready(() => {
     setInterval(viewSlideShow, 8000);
     leftBtn.click(viewSlideShow);
     rightBtn.click(viewSlideShow);
+
+    dragPromoSlider();
+    dragMenuSlider();
 })
+
+const dragPromoSlider = () => {
+    const slider = $('.promo.slider');
+    const innerSlider = $('.promotion-imgs');
+    
+    let isPressed = false;
+    let startX, x;
+    
+    slider.mousedown(e => {
+        isPressed = true;
+        startX = e.offsetX - innerSlider.offset().left;
+        slider.css('cursor', 'grabbing');
+    })
+    
+    slider.mouseenter(() => {
+        slider.css('cursor', 'grab');
+    })
+    
+    slider.mouseup(() => {
+        slider.css('cursor', 'grab');
+    })
+    
+    $(window).mouseup(() => {
+        isPressed = false;
+    })
+    
+    slider.mousemove(e => {
+        if (!isPressed) return;
+        e.preventDefault();
+        x = e.offsetX;
+        innerSlider.css('left', `${x - startX}px`);
+        checkBoundary(slider, innerSlider);
+    })
+}
+
+const dragMenuSlider = () => {
+    const slider = $('.menu.slider');
+    const innerSlider = $('.latest-menu-imgs');
+    
+    let isPressed = false;
+    let startX, x;
+    
+    slider.mousedown(e => {
+        isPressed = true;
+        startX = e.offsetX - innerSlider.offset().left;
+        slider.css('cursor', 'grabbing');
+    })
+    
+    slider.mouseenter(() => {
+        slider.css('cursor', 'grab');
+    })
+    
+    slider.mouseup(() => {
+        slider.css('cursor', 'grab');
+    })
+    
+    $(window).mouseup(() => {
+        isPressed = false;
+    })
+    
+    slider.mousemove(e => {
+        if (!isPressed) return;
+        e.preventDefault();
+        x = e.offsetX;
+        innerSlider.css('left', `${x - startX}px`);
+        checkBoundary(slider, innerSlider);
+    })
+}
+
+const checkBoundary = (slider, innerSlider) => {
+    let outer = slider[0].getBoundingClientRect();
+    let inner = innerSlider[0].getBoundingClientRect();
+
+    if (parseInt(innerSlider.css('left')) > 0) {
+        innerSlider.css('left', '0px');
+    } else if (inner.right < outer.right) {
+        innerSlider.css('left', `-${inner.width - outer.width}px`);
+    }
+}
 
 const viewSlideShow = () => {
     const slides = $('.img-banner .slide.active');
@@ -21,7 +103,7 @@ const animateSlide = () => {
     const slideWidth = slide.width();
 
     const prev = slide.prev();
-    if (prev.length !== 0) {
+    if (prev.length) {
         banner.animate({'margin-left': '-=' + slideWidth}, 1000);
     } else {
         banner.animate({'margin-left': 0}, 1000);
