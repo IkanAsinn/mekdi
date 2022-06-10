@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -85,6 +86,7 @@ header a:hover, a:active {
     position: sticky;
     top: -1px;
     background-color: white;
+    z-index: 100;
     /* border: 1px solid red; */
 }
 
@@ -128,18 +130,26 @@ section h1 {
 
 .flex-container {
     display: flex;
-    justify-content:flex-start;
+    justify-content: space-around;
 }
 
 .flexbox {
     /* border: 1px solid red; */
     height: fit-content;
-    width: 32%;
+    width: 36%;
     background-color: #c4c4c4;
     padding: 25px;
     border-radius: 20px;
     margin: 10px 10px;
     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 0.5s;
+}
+
+.flexbox.pop-up {
+    transform: translate(0, 40px);
+    opacity: 1;
 }
 
 .flexbox img {
