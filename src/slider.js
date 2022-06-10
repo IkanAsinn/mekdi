@@ -6,53 +6,25 @@ $(document).ready(() => {
     leftBtn.click(viewSlideShow);
     rightBtn.click(viewSlideShow);
 
-    dragPromoSlider();
-    dragMenuSlider();
+    dragSlider();
 })
 
-const dragPromoSlider = () => {
-    const slider = $('.promo.slider');
-    const innerSlider = $('.promotion-imgs');
+const dragSlider = () => {
+    let slider = $('.slider');
+    let innerSlider;
     
     let isPressed = false;
     let startX, x;
     
     slider.mousedown(e => {
         isPressed = true;
-        startX = e.offsetX - innerSlider.offset().left;
-        slider.css('cursor', 'grabbing');
-    })
-    
-    slider.mouseenter(() => {
-        slider.css('cursor', 'grab');
-    })
-    
-    slider.mouseup(() => {
-        slider.css('cursor', 'grab');
-    })
-    
-    $(window).mouseup(() => {
-        isPressed = false;
-    })
-    
-    slider.mousemove(e => {
-        if (!isPressed) return;
-        e.preventDefault();
-        x = e.offsetX;
-        innerSlider.css('left', `${x - startX}px`);
-        checkBoundary(slider, innerSlider);
-    })
-}
-
-const dragMenuSlider = () => {
-    const slider = $('.menu.slider');
-    const innerSlider = $('.latest-menu-imgs');
-    
-    let isPressed = false;
-    let startX, x;
-    
-    slider.mousedown(e => {
-        isPressed = true;
+        if (e.target.matches('.promo.slider')) {
+            slider = $('.promo.slider');
+            innerSlider = $('.promotion-imgs');
+        } else if (e.target.matches('.menu.slider')) {
+            slider = $('.menu.slider');
+            innerSlider = $('.latest-menu-imgs');
+        }
         startX = e.offsetX - innerSlider.offset().left;
         slider.css('cursor', 'grabbing');
     })
