@@ -8,14 +8,14 @@ header {
     background-color: #C4C4C4;
     display: flex;
     align-items: center;
-    padding: 30px 70px;
+    padding: 3% 3%;
     justify-content: space-between;
 }
 
 header h1 {
     font-family: Roboto;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 200%;
 }
 
 header nav ul {
@@ -162,6 +162,7 @@ header a:hover, a:active {
 .outlets {
     text-align: center;
     padding: 30px 0;
+    width: 100%;
 }
 
 .outlets h1 {
@@ -178,9 +179,17 @@ header a:hover, a:active {
     font-size: 26px;
 }
 
+#outlets-imgs{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 .outlets-images {
     display: inline-block;
     text-align: left;
+    width: 30%;
+    text-align: center;
 }
 
 .outlets-images h3 {
@@ -197,15 +206,15 @@ header a:hover, a:active {
 }
 
 #outlets-imgs img {
-    margin: 0 10px;
-    height: 260px;
-    width: 440px;
+    /* margin: 0 10px; */
+    height: 50%;
+    width: 90%;
 }
 
 .promotion {
     text-align: center;
     background-color: #C4C4C4;
-    padding:70px 50px;
+    padding:3% 3%;
     overflow: hidden;
     width: 100%;
 }
@@ -248,10 +257,12 @@ header a:hover, a:active {
 }
 
 .promotion-images {
+    /* width: 100%; */
     padding: 20px 30px;
     background-color: #D30000;
     border-radius: 20px;
     pointer-events: none;
+    /* margin: 0% 0.5%; */
 }
 
 .promotion-images:not(:last-child) {
@@ -328,7 +339,7 @@ header a:hover, a:active {
     font-family: Roboto;
     border-radius: 20px;
     padding: 20px;
-    height: fit-content;
+    /* height: fit-content; */
     pointer-events: none;
 }
 
@@ -405,6 +416,63 @@ footer h3 {
     font-weight: 300;
 }
 
-/* @media only screen and (max-width: 400px) {
 
-}  */
+@media only screen and (max-width: 1192px) {
+    header{
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+    
+    nav{
+        margin-top: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 5px 0px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    #outlets-imgs{
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .outlets-images{
+        width: 70%;
+        /* height: 50%; */
+    }
+
+    #outlets-imgs img{
+        height: 250px;
+    }
+
+    .promo.slider{
+        height: 400px;
+    }
+    .promotion-imgs img {
+        width: 280px;
+        height: 150px;
+        /* border-radius: 20px; */
+    }
+
+    .latest-menu-imgs img {
+        width: 200px;
+        height: 200px;
+        /* border-radius: 20px; */
+    }
+
+    .follow-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
