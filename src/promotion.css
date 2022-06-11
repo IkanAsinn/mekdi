@@ -62,18 +62,20 @@ section h1 {
 .flex-container {
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
     /* border: 1px solid red; */
 }
 
 .flexbox {
-    width: 32%;
+    width: 30%;
     position: relative;
     height: 360px;
     /* border: 1px solid red; */
     background-color: #c4c4c4;
-    padding: 25px;
+    padding: 2%;
     border-radius: 20px;
-    margin: 10px 10px;
+    margin:  0.7%;
     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
 }
 
@@ -89,7 +91,7 @@ section h1 {
 }
 
 .details h2 {
-    font-size: 32px;
+    font-size: 130%;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -349,3 +351,59 @@ footer h3 {
     font-weight: 300;
 }
 
+
+@media only screen and (max-width: 1192px) {
+    header{
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+    
+    nav{
+        margin-top: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 5px 0px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    /* body{
+        background-color: blue;
+    } */
+
+    .flexbox{
+        height: 260px;
+    }
+
+    .flexbox img {
+        height: 100px;
+        width: 100%;
+    }
+
+    .follow-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .navbar a {
+        padding: 10px;
+        border-bottom: 3px solid grey;
+        font-size: 80%;
+    }
+
+    .navbar ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    section{
+        width: 100%;
+    }
+}
