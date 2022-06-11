@@ -41,12 +41,13 @@ header a:hover, a:active {
 }
 
 .content {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .content img {
-    width: 700px;
+    width: 50%;
     object-fit: cover;
     height: 1200px;
 }
@@ -54,7 +55,7 @@ header a:hover, a:active {
 .form {
     background-image: url('../image/form/wood-background.jpg');
     height: auto;
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,12 +63,13 @@ header a:hover, a:active {
 
 .sign-up {
     width: 80%;
-    height: 80%;
+    /* height: 80%; */
     position: relative;
     background-color: #e7e7e7;
     border-radius: 20px;
     padding: 40px 30px;
     font-family: Montserrat;
+    margin: 20px 0px;
 }
 
 .sign-up h1 {
@@ -84,6 +86,7 @@ header a:hover, a:active {
 }
 
 .input-box {
+    width: 100%;
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
@@ -96,7 +99,7 @@ header a:hover, a:active {
 
 .input {
     height: 35px;
-    width: 250px;
+    width: 80%;
     border: 3px solid #A46F48;
     font-size: 15px;
     border-radius: 10px;
@@ -105,11 +108,12 @@ header a:hover, a:active {
     text-indent: 15px;
 }
 
-.date-input {
-    width: 180px;
+input[type="date"]{
+    text-align: center;
 }
 
 .input-flex {
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
@@ -230,4 +234,44 @@ footer h3 {
     margin-left: 30px;
     font-family: Montserrat;
     font-weight: 300;
+}
+
+@media only screen and (max-width: 1192px) {
+    header{
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+    
+    nav{
+        margin-top: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 5px 0px;
+    }
+
+    .content img{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    /* .content{
+        flex-direction: column;
+    } */
+
+    .follow-contact {
+        flex-direction: column;
+        align-items: center;
+    }
 }
