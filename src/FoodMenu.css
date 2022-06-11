@@ -108,7 +108,7 @@ header a:hover, a:active {
 
 section {
     margin: 0 auto;
-    width: 65%;
+    width: 75%;
     padding: 0 15px;
     font-family: Montserrat;
     /* border: 1px solid blue; */
@@ -127,7 +127,8 @@ section h1 {
 
 .flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     /* border: 1px solid red; */
 }
 
@@ -135,6 +136,7 @@ section h1 {
     display: flex;
     justify-content: space-around;
     width: 47%;
+    /* height: 250px; */
     background-color: #c4c4c4;
     padding: 2%;
     border-radius: 20px;
@@ -153,7 +155,7 @@ section h1 {
 
 .flexbox img {
     width: 40%;
-    height: 15vw;
+    height: 200px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -165,7 +167,7 @@ section h1 {
 
 .details h3 {
     /* padding: 5% 0; */
-    font-size: 1.6vw;
+    font-size: 20px;
     text-transform: uppercase;
     /* border: 1px solid red; */
 }
@@ -174,6 +176,7 @@ section h1 {
     font-size: 0.8vw;
     /* height: 80px; */
     padding: 15px 0;
+    margin-bottom: 25px;
     /* border: 1px solid red; */
 }
 
@@ -194,7 +197,6 @@ section h1 {
 
 .flex-1 {
     width: 100%;
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,12 +206,12 @@ section h1 {
 }
 
 .flex-1 h4 {
-    font-size: 1vw;
+    font-size: 15px;
     /* border: 1px solid red; */
 }
 
 .flex-1 button {
-    font-size: 0.8vw;
+    font-size: 15px;
     width: 40%;
     padding: 3%;
     border-radius: 10px;
@@ -288,20 +290,18 @@ footer h3 {
     }
 }
 
-@media only screen and (max-width: 850px) {
-
+@media only screen and (max-width: 911px) {
     section{
         width: 80%;
     }
 
-    /* .flexbox img {
-        width: 40%;
-        height: 80px;
-    } */
-
-    .details p{
-        font-size: 6px;
+    .flexbox  {
+        width: 80%;
     }
+
+}
+
+@media only screen and (max-width: 935px) {
 
     .follow-contact {
         flex-direction: column;

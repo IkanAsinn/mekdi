@@ -61,7 +61,7 @@ section h1 {
 
 .flex-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     /* border: 1px solid red; */
@@ -231,7 +231,7 @@ header h1 {
 
 .text {
     position: absolute;
-    bottom: 20px;
+    bottom: 7%;
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -376,12 +376,16 @@ footer h3 {
         background-color: blue;
     } */
 
+    section{
+        width: 90%;
+    }
+
     .flexbox{
-        height: 260px;
+        width: 45%;
+        height: 330px;
     }
 
     .flexbox img {
-        height: 100px;
         width: 100%;
     }
 
