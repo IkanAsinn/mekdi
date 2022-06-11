@@ -46,14 +46,13 @@ header a:hover, a:active {
 }
 
 .content img {
-    width: 600px;
-    height: 800px;
+    width: 40%;
 }
 
 .form {
     background-image: url('../image/form/wood-background.jpg');
     height: auto;
-    width: 100%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,12 +60,13 @@ header a:hover, a:active {
 
 .sign-in {
     width: 80%;
-    height: 80%;
+    height: 600px;
     position: relative;
     background-color: #e7e7e7;
     border-radius: 20px;
-    padding: 40px 100px;
+    padding: 40px 80px;
     font-family: Montserrat;
+    margin: 20px 0px;
 }
 
 .sign-in h1 {
@@ -82,14 +82,16 @@ header a:hover, a:active {
 
 .input-box {
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 500px;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
+    width: 100%;
+    /* border: 1px solid black; */
+    margin: 0px auto;
 }
 
 .input {
     height: 40px;
-    width: 500px;
+    width: 90%;
     border: 3px solid #A46F48;
     font-size: 20px;
     border-radius: 10px;
@@ -185,4 +187,40 @@ footer h3 {
     margin-left: 30px;
     font-family: Montserrat;
     font-weight: 300;
+}
+
+
+@media only screen and (max-width: 1192px) {
+    header{
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+    
+    nav{
+        margin-top: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 5px 0px;
+    }
+
+    .content img{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    .follow-contact {
+        flex-direction: column;
+        align-items: center;
+    }
 }
