@@ -37,58 +37,71 @@
             <div class="sign-up">
                 <h1>SIGN UP</h1>
                 <p>Sign-up to order</p>
-                <div class="input-box">
-                    <div class="input-flex">
-                        <h3>Name</h3>
-                        <input type="text" class="input">
-                        <h3>Gender</h3>
-                        <div class="radio">
-                            <input type="radio" name="gender" id="male" value="Male">
-                            <label for="male">Male</label>
-                            <input type="radio" name="gender" id="female" value="Female">
-                            <label for="female">Female</label>
+                <form action="#" id="register"> 
+                    <h3 id="errorMessage"></h3>
+                    <div class="input-box">
+                        <div class="input-flex">
+                            <h3>Name</h3>
+                            <input type="text" class="input" id="name" required>
+                            <h3>Gender</h3>
+                            <div class="radio">
+                                <div class="male"> 
+                                    <div class="radio">
+                                        <input type="radio" name="gender" id="male" value="Male" required>
+                                        <label for="male">Male</label>
+                                    </div>
+                                </div>
+                                <div class="female">
+                                    <div class="radio">
+                                        <input type="radio" name="gender" id="female" value="Female" required>
+                                        <label for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Date of Birth</h3>
+                            <input type="date" class="input date-input" required>
+                            <h3>Phone Number</h3>
+                            <input type="text" class="input" id="phoneNum" required>
+                            <h3>Payment Method</h3>
+                            <div class="radio-1">
+                                <input type="radio" name="payment" id="virtual-acc" required>
+                                <label for="virtual-acc">Virtual Account</label>
+                            </div>
+                            <div class="radio-1">
+                                <input type="radio" name="payment" id="gopay" required>
+                                <label for="gopay">GoPay</label>
+                            </div>
+                            <div class="radio-1">
+                                <input type="radio" name="payment" id="dana" required>
+                                <label for="dana">DANA</label>
+                            </div>
+                            <div class="radio-1">
+                                <input type="radio" name="payment" id="ovo" required>
+                                <label for="ovo">OVO</label>
+                            </div>
                         </div>
-                        <h3>Date of Birth</h3>
-                        <input type="date" class="input date-input">
-                        <h3>Phone Number</h3>
-                        <input type="text" class="input">
-                        <h3>Payment Method</h3>
-                        <div class="radio-1">
-                            <input type="radio" name="payment" id="virtual-acc">
-                            <label for="virtual-acc">Virtual Account</label>
+                        <div class="input-flex">
+                            <h3>Address</h3>
+                            <input type="text" class="input" required>
+                            <h3>Email</h3>
+                            <input type="email" class="input" required>
+                            <h3>Password</h3>
+                            <input type="password" class="input" id="password" required>
+                            <h3>Confirm Password</h3>
+                            <input type="password" class="input" id="confirmPassword" required>
                         </div>
-                        <div class="radio-1">
-                            <input type="radio" name="payment" id="gopay">
-                            <label for="gopay">GoPay</label>
-                        </div>
-                        <div class="radio-1">
-                            <input type="radio" name="payment" id="dana">
-                            <label for="dana">DANA</label>
-                        </div>
-                        <div class="radio-1">
-                            <input type="radio" name="payment" id="ovo">
-                            <label for="ovo">OVO</label>
+
+                        <div class="button">
+                            <a href="register.html"><button type="submit" id="btn-signUp">Sign Up</button></a>
+                            <p>Have an account? <a href="login.html">Login</a></p>
                         </div>
                     </div>
-                    <div class="input-flex">
-                        <h3>Address</h3>
-                        <input type="text" class="input">
-                        <h3>Email</h3>
-                        <input type="email" class="input">
-                        <h3>Password</h3>
-                        <input type="password" class="input">
-                        <h3>Confirm Password</h3>
-                        <input type="password" class="input">
+                    <div class="checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the defined terms & conditions</label>
                     </div>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="terms">
-                    <label for="terms">I agree to the defined terms & conditions</label>
-                </div>
-                <div class="button">
-                    <a href="register.html"><button type="submit">Sign Up</button></a>
-                    <p>Have an account? <a href="login.html">Login</a></p>
-                </div>
+            </form>
+
             </div>
         </div>
     </div>
@@ -98,10 +111,10 @@
             <div class="follow-us">
                 <h3>FOLLOW US!</h3>
                 <div class="soc-med">
-                    <img src="../images/brandico_instagram-filled.png" alt="">
+                    <!-- <img src="../images/brandico_instagram-filled.png" alt="">
                     <img src="../images/brandico_facebook-rect.png" alt="">
                     <img src="../images/fa_twitter-square.png" alt="">
-                    <img src="../images/bi_youtube.png" alt="">
+                    <img src="../images/bi_youtube.png" alt=""> -->
                 </div>
             </div>
             <div class="contact-us">
@@ -113,5 +126,6 @@
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
 
+    <script src="./register.js"></script>
 </body>
 </html>
