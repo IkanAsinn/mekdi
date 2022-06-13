@@ -21,20 +21,20 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script src="slider.js" defer></script>
+    <script src="ham-menu.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>McDoland</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="promotion.html">Promotion</a></li>
-                <li><a href="FoodMenu.html">Food Menu</a></li>
-                <li><a href="beverage.html">Beverage Menu</a></li>
-                <li><a href="register.html">Register for Delivery</a></li>
-            </ul>
-        </nav>
+        <div class="bx bx-menu" id="hamburger-menu"></div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="FoodMenu.html">Food Menu</a></li>
+            <li><a href="beverage.html">Beverage Menu</a></li>
+            <li><a href="register.html">Register for Delivery</a></li>
+        </ul>
     </header>
 
     <div class="content home">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div id="show-more-btn">
+            <div class="show-more-btn">
                 <a href="./promotion.html"><button>SHOW ME MORE!</button></a>
             </div>
         </div>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div id="show-more-btn">
+            <div class="show-more-btn">
                 <a href="./FoodMenu.html"><button>SHOW ME MORE!</button></a>
             </div>
         </div>
