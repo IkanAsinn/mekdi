@@ -177,3 +177,18 @@ https://images.unsplash.com/photo-1632298054792-94d2acf0acfd?ixlib=rb-1.2.1&ixid
 
 love birds
 https://images.unsplash.com/photo-1589983295844-c846e51fe2ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+
+instagram icon
+https://boxicons.com/?query=instagram
+
+facebook icon
+https://boxicons.com/?query=facebook
+
+twitter icon
+https://boxicons.com/?query=twitter
+
+youtube icon
+https://boxicons.com/?query=youtube
+
+mail icon
+https://boxicons.com/?query=mail

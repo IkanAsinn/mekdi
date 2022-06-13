@@ -302,10 +302,10 @@
             <div class="follow-us">
                 <h3>FOLLOW US!</h3>
                 <div class="soc-med">
-                    <img src="../images/brandico_instagram-filled.png" alt="">
-                    <img src="../images/brandico_facebook-rect.png" alt="">
-                    <img src="../images/fa_twitter-square.png" alt="">
-                    <img src="../images/bi_youtube.png" alt="">
+                    <a href="https://instagram.com"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://facebook.com"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="https://twitter.com"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com"><i class='bx bxl-youtube'></i></a>
                 </div>
             </div>
             <div class="contact-us">
@@ -317,28 +317,6 @@
         <p id="copyright">Copyright&copy;2022 McDoland.com</p>
     </footer>
 
-        <!-- script -->
-        <script>
-            const sections = document.querySelectorAll('section');
-            const navList = document.querySelectorAll('.navbar ul li');
-    
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                        current = section.getAttribute('id');
-                    }
-                })
-                navList.forEach(li => {
-                    li.classList.remove('active');
-                    if (li.classList.contains(current)) {
-                        li.classList.add('active');
-                    }
-                })
-            })
-        </script>
 </body>
 
 </html>

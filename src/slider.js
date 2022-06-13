@@ -1,65 +1,7 @@
-$(document).ready(() => {
-    const leftBtn = $('.slider-btn #prev');
-    const rightBtn = $('.slider-btn #next');
+const leftBtn = $('.slider-btn #prev');
+const rightBtn = $('.slider-btn #next');
 
-    setInterval(viewSlideShow, 8000);
-    leftBtn.click(viewSlideShow);
-    rightBtn.click(viewSlideShow);
-
-    dragSlider();
-})
-
-const dragSlider = () => {
-    let slider = $('.slider');
-    let innerSlider;
-    
-    let isPressed = false;
-    let startX, x;
-    
-    slider.mousedown(e => {
-        isPressed = true;
-        if (e.target.matches('.promo.slider')) {
-            slider = $('.promo.slider');
-            innerSlider = $('.promotion-imgs');
-        } else if (e.target.matches('.menu.slider')) {
-            slider = $('.menu.slider');
-            innerSlider = $('.latest-menu-imgs');
-        }
-        startX = e.offsetX - innerSlider.offset().left;
-        slider.css('cursor', 'grabbing');
-    })
-    
-    slider.mouseenter(() => {
-        slider.css('cursor', 'grab');
-    })
-    
-    slider.mouseup(() => {
-        slider.css('cursor', 'grab');
-    })
-    
-    $(window).mouseup(() => {
-        isPressed = false;
-    })
-    
-    slider.mousemove(e => {
-        if (!isPressed) return;
-        e.preventDefault();
-        x = e.offsetX;
-        innerSlider.css('left', `${x - startX}px`);
-        checkBoundary(slider, innerSlider);
-    })
-}
-
-const checkBoundary = (slider, innerSlider) => {
-    let outer = slider[0].getBoundingClientRect();
-    let inner = innerSlider[0].getBoundingClientRect();
-
-    if (parseInt(innerSlider.css('left')) > 0) {
-        innerSlider.css('left', '0px');
-    } else if (inner.right < outer.right) {
-        innerSlider.css('left', `-${inner.width - outer.width}px`);
-    }
-}
+// ===IMAGE CAROUSEL===
 
 const viewSlideShow = () => {
     const slides = $('.img-banner .slide.active');
@@ -121,5 +63,59 @@ const addActive = (element) => {
     } else {
         prev.addClass('active');
         prevNav.addClass('active');
+    }
+}
+
+setInterval(viewSlideShow, 8000);
+leftBtn.click(viewSlideShow);
+rightBtn.click(viewSlideShow);
+
+// ===DRAG SLIDER===
+
+let container = $('.slider');
+let slider, outset, x;
+let isPressed = false;
+
+container.mousedown(e => {
+    isPressed = true;
+    if (e.target.matches('.promo.slider')) {
+        container = $('.promo.slider');
+        slider = $('.promotion-imgs');
+    } else if (e.target.matches('.menu.slider')) {
+        container = $('.menu.slider');
+        slider = $('.latest-menu-imgs');
+    }
+    outset = e.offsetX - slider.offset().left;
+    container.css('cursor', 'grabbing');
+})
+
+container.mouseenter(() => {
+    container.css('cursor', 'grab');
+})
+
+container.mouseup(() => {
+    container.css('cursor', 'grab');
+})
+
+$(window).mouseup(() => {
+    isPressed = false;
+})
+
+container.mousemove(e => {
+    if (!isPressed) return;
+    e.preventDefault();
+    x = e.offsetX;
+    slider.css('left', `${x - outset}px`);
+    checkBoundary(container, slider);
+})
+
+const checkBoundary = (container, slider) => {
+    let parent = container[0].getBoundingClientRect();
+    let child = slider[0].getBoundingClientRect();
+
+    if (parseInt(slider.css('left')) > 0) {
+        slider.css('left', '0px');
+    } else if (child.right < parent.right) {
+        slider.css('left', `-${child.width - parent.width}px`);
     }
 }

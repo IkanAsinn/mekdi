@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -236,7 +240,7 @@ header a:hover, a:active {
 
 .promo.slider {
     width: 100%;
-    height: 478px;
+    height: 425px;
     position: relative;
     overflow: hidden;
 }
@@ -291,7 +295,7 @@ header a:hover, a:active {
 
 .latest-menu {
     text-align: center;
-    padding:70px 50px;
+    padding:3% 3%;
     overflow: hidden;
     width: 100%;
     text-align: center;
@@ -369,6 +373,11 @@ header a:hover, a:active {
     font-size: 20px;
     border: none;
     cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+#show-more-btn button:hover {
+    transform: scale(1.05);
 }
 
 footer {
@@ -388,8 +397,15 @@ footer h3 {
     margin-bottom: 10px;
 }
 
-.soc-med img {
+.soc-med i {
     margin: 0 3px;
+    font-size: 40px;
+    color: #A93333;
+    transition: 200ms ease-in-out;
+}
+
+.soc-med i:hover {
+    transform: scale(1.1);
 }
 
 .contact-us p {
