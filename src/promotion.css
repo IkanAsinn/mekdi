@@ -93,6 +93,14 @@ section h1 {
     border-radius: 20px;
     margin:  0.7%;
     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 0.5s;
+}
+
+.flexbox.pop-up {
+    transform: translate(0, 40px);
+    opacity: 1;
 }
 
 .flexbox img {

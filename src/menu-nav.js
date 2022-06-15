@@ -12,11 +12,10 @@ $(document).ready(() => {
             }
         });
         if (windowScroll >= $(`#${current}`).offset().top - 400) {
-            console.log('ok')
             $(`#${current} .flexbox`).each((i) => {
                 setTimeout(() => {
                     $(`#${current} .flexbox`).eq(i).addClass('pop-up');
-                }, 200 * i);
+                }, 250 * i);
             })
         }
         navList.each((i, li) => {

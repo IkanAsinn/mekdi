@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
 
     <script src="ham-menu.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>McDoland</h1>
@@ -38,7 +40,7 @@
             <div class="sign-up">
                 <h1>SIGN UP</h1>
                 <p>Sign-up to order</p>
-                <form action="#" id="register"> 
+                <form action="#" id="register">
                     <h3 id="errorMessage"></h3>
                     <div class="input-box">
                         <div class="input-flex">
@@ -46,7 +48,7 @@
                             <input type="text" class="input" id="name" required>
                             <h3>Gender</h3>
                             <div class="radio">
-                                <div class="male"> 
+                                <div class="male">
                                     <div class="radio">
                                         <input type="radio" name="gender" id="male" value="Male" required>
                                         <label for="male">Male</label>
@@ -91,17 +93,17 @@
                             <h3>Confirm Password</h3>
                             <input type="password" class="input" id="confirmPassword" required>
                         </div>
-
-                        <div class="button">
-                            <a href="register.html"><button type="submit" id="btn-signUp">Sign Up</button></a>
-                            <p>Have an account? <a href="login.html">Login</a></p>
-                        </div>
                     </div>
+
                     <div class="checkbox">
                         <input type="checkbox" id="terms" required>
                         <label for="terms">I agree to the defined terms & conditions</label>
                     </div>
-            </form>
+                    <div class="button">
+                        <a href="register.html"><button type="submit" id="btn-signUp">Sign Up</button></a>
+                        <p>Have an account? <a href="login.html">Login</a></p>
+                    </div>
+                </form>
 
             </div>
         </div>
@@ -129,4 +131,5 @@
 
     <script src="./register.js"></script>
 </body>
+
 </html>

@@ -107,7 +107,8 @@ header a:hover, a:active {
 
 .input-box {
     width: 100%;
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
@@ -178,14 +179,15 @@ input[type="date"]{
 }
 
 .button {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    /* position: absolute; */
+    /* bottom: 50px; */
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
     font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 
 .button button{
