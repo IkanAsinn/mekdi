@@ -1,27 +1,27 @@
 $(document).ready(() => {
-    const categories = $('section');
-    const navbar = $('.navbar ul li');
-    let curr = '';
+    const sections = $('section');
+    const navList = $('.navbar ul li');
+    let current = '';
     $(window).scroll(() => {
         let windowScroll = $(window).scrollTop();
-        categories.each((e) => {
-            const top = $(e).offset().top;
-            const height = $(e).height();
-            if (windowScroll >= (top - height / 3)) {
-                curr = $(e).attr('id');
+        sections.each((i, section) => {
+            const sectionTop = $(section).offset().top;
+            const sectionHeight = $(section).height();
+            if (windowScroll >= (sectionTop - sectionHeight / 3)) {
+                current = $(section).attr('id');
             }
         });
-        if (windowScroll >= $(`#${curr}`).offset().top - 400) {
-            $(`#${curr} .flexbox`).each((i) => {
+        if (windowScroll >= $(`#${current}`).offset().top - 400) {
+            $(`#${current} .flexbox`).each((i) => {
                 setTimeout(() => {
-                    $(`#${curr} .flexbox`).eq(i).addClass('pop-up');
+                    $(`#${current} .flexbox`).eq(i).addClass('pop-up');
                 }, 250 * i);
             })
         }
-        navbar.each((e) => {
-            $(e).removeClass('active');
-            if ($(e).hasClass(curr)) {
-                $(e).addClass('active');
+        navList.each((i, li) => {
+            $(li).removeClass('active');
+            if ($(li).hasClass(current)) {
+                $(li).addClass('active');
             }
         });
     });
