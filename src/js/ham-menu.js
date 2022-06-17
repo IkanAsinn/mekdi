@@ -1,12 +1,12 @@
-let menu = document.querySelector('#hamburger-menu');
-let navbar = document.querySelector('header ul');
+const ham = $('#hamburger-menu');
+const ul = $('header ul');
 
-menu.addEventListener('click', () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+ham.click(() => {
+    ham.toggleClass('bx-x');
+    ul.toggleClass('active');
 })
 
-window.addEventListener('scroll', () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
+$(window).scroll(() => {
+    ham.removeClass('bx-x');
+    ul.removeClass('active');
 })
