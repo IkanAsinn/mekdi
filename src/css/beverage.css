@@ -9,6 +9,7 @@ html {
 }
 
 header {
+    font-size: 1rem;
     position: sticky;
     top: 0;
     width: 100%;
@@ -16,7 +17,7 @@ header {
     background-color: #C4C4C4;
     display: flex;
     align-items: center;
-    padding: 20px 70px;
+    padding: 1.5em 3.5em;
     justify-content: space-between;
 }
 
@@ -90,10 +91,10 @@ header a:hover, a:active {
 }
 
 .navbar {
-    margin-top: 60px;
-    padding: 25px 0;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    padding: 1.8em 0;
     font-family: Montserrat;
-    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     position: sticky;
@@ -102,6 +103,11 @@ header a:hover, a:active {
     z-index: 100;
     /* border: 1px solid red; */
 }
+
+.static {
+    position: static !important;
+}
+
 
 .navbar ul {
     list-style-type: none;
@@ -159,6 +165,7 @@ section h1 {
     opacity: 0;
     transform: translate(0, -40px);
     transition: 0.5s;
+    text-align: center;
 }
 
 .flexbox.pop-up {
@@ -185,10 +192,12 @@ section h1 {
 }
 
 .flex-1 {
+    margin: 0 auto;
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
 
 .flex-1 h4 {
@@ -291,10 +300,17 @@ footer h3 {
 }
 
 @media only screen and (max-width: 850px) {
+    footer {  
+        text-align: center;
+    }
 
     .follow-contact {
         flex-direction: column;
         align-items: center;
+    }
+
+    .follow-us {
+        margin-bottom: 30px;
     }
 }
 
@@ -302,7 +318,7 @@ footer h3 {
     .navbar a {
         padding: 10px;
         border-bottom: 3px solid grey;
-        font-size: 80%;
+        font-size: .8rem;
     }
 
     .navbar ul{

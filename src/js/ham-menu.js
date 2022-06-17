@@ -1,12 +1,13 @@
-const ham = $('#hamburger-menu');
-const ul = $('header ul');
+$(document).ready(() => {
+    $('#hamburger-menu').click(() => {
+        $('#hamburger-menu').toggleClass('bx-x');
+        $('header ul').toggleClass('active');
+        $('.navbar').toggleClass('static');
+    });
 
-ham.click(() => {
-    ham.toggleClass('bx-x');
-    ul.toggleClass('active');
-})
-
-$(window).scroll(() => {
-    ham.removeClass('bx-x');
-    ul.removeClass('active');
-})
+    $(window).scroll(() => {
+        $('#hamburger-menu').removeClass('bx-x');
+        $('header ul').removeClass('active');
+        $('.navbar').removeClass('static');
+    });
+});

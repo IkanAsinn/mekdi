@@ -3,10 +3,6 @@ let button = document.getElementById('btn-signUp')
 let phoneNum = document.getElementById('phoneNum')
 let error = document.getElementById('errorMessage')
 
-console.log(phoneNum)
-
-
-
 signUp.addEventListener('submit', function(e){
     e.preventDefault();
     let username = document.getElementById('name').value
@@ -15,11 +11,6 @@ signUp.addEventListener('submit', function(e){
     let confirmPass = document.getElementById('confirmPassword').value
 
     error.style.display = "none";
-
-    // console.log(username);
-    console.log(phoneNum)
-    // console.log(pass)
-    // console.log(confirmPass)
 
     let phoneValid = 1
 
@@ -49,6 +40,3 @@ signUp.addEventListener('submit', function(e){
 
     location.replace("login.html")
 })
-
-
-
